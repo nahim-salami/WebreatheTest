@@ -29,7 +29,7 @@ class WebreatheTestSession
     
     public static function init()
     {
-        if (session_status() !== 2) {
+        if (!headers_sent() && session_status() !== 2) {
             session_start();
         }
 
@@ -96,7 +96,7 @@ class WebreatheTestSession
      */
     public static function start()
     {
-        if (session_status() !== 2) {
+        if (!headers_sent() && session_status() !== 2) {
             session_start();
         }
 
