@@ -23,7 +23,7 @@ class DefaultSkin implements Skin
         ?>
         <html>
             <head>
-                <title><?= $this->header->title ?></title>
+                <title><?= $this->header->title ?> | WebreatheTest</title>
             </head>
             <body>
                 <ul>
@@ -31,7 +31,7 @@ class DefaultSkin implements Skin
                         <a href="<?=SITE_URL?>">Home</a>
                     </li>
                     <li>
-                        <a href="<?=SITE_URL?>/login?help=test">Login</a>
+                        <a href="<?=SITE_URL?>/login">Login</a>
                     </li>
                     <li>
                         <a href="<?=SITE_URL?>/help">Help</a>

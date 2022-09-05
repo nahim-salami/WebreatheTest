@@ -3,10 +3,12 @@
 namespace WebreatheTest\view;
 
 require_once(dirname(__DIR__) . '/includes/skins/default/class-default-skin.php');
+require_once(dirname(__DIR__) . '/includes/skins/class-siginup-skin.php');
 require_once(dirname(__DIR__) . '/includes/skins/class-login-skin.php');
 
 use WebreatheTest\skin\DefaultSkin as Skin;
 use WebreatheTest\skin\WebreatheTestLogin as ILogin;
+use WebreatheTest\skin\WebreatheTestSignUp as ISignUp;
 
 class WebreatheTestPublic
 {
@@ -35,6 +37,10 @@ class WebreatheTestPublic
         switch (strtolower($this->getPage()->name)) {
             case 'login':
                 $skin = new ILogin();
+                break;
+
+            case 'sign up':
+                $skin = new ISignUp();
                 break;
             
             default:

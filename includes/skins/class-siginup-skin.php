@@ -6,7 +6,7 @@ require_once(dirname(__DIR__, 2) . '/view/interface-public-skin.php');
 
 use WebreatheTest\app\interfaces\PublicSkin as Skin;
 
-class WebreatheTestLogin implements Skin
+class WebreatheTestSignUp implements Skin
 {
     private $data;
 
@@ -64,14 +64,14 @@ class WebreatheTestLogin implements Skin
             <div class="container-fluid h-100">
             <div class="row flex-row h-100 bg-white">
                     <div class="col-xl-8 col-lg-6 col-md-5 p-0 d-md-block d-lg-block d-sm-none d-none">
-                        <div class="lavalite-bg" style="background-image: url('../img/auth/login-bg.jpg')">
+                        <div class="lavalite-bg">
                             <div class="lavalite-overlay"></div>
                         </div>
                     </div>
                     <div class="col-xl-3 col-lg-6 col-md-7 my-auto p-0">
                         <div class="authentication-form mx-auto">
-                            <h3>Connectez vous à WEBREATHE</h3>
-                            <p>Ravie de vous revoir !!</p>
+                            <h3>Vous êtes nouveau</h3>
+                            <p>Rejoignez WEBREATHE</p>
                             <form action="<?=SITE_URL?>/control" method="POST">
                                 <div class="form-group">
                                     <input type="text" class="form-control" placeholder="johndoe@admin.com" required="" value="">
@@ -81,23 +81,24 @@ class WebreatheTestLogin implements Skin
                                     <input type="password" class="form-control" placeholder="Password" required="" value="123456">
                                     <i class="ik ik-lock"></i>
                                 </div>
+                                <div class="form-group">
+                                    <input type="password" class="form-control" placeholder="Confirm password" required="" value="123456">
+                                    <i class="ik ik-lock"></i>
+                                </div>
                                 <div class="row">
                                     <div class="col text-left">
                                         <label class="custom-control custom-checkbox">
                                             <input type="checkbox" class="custom-control-input" id="item_checkbox" name="item_checkbox" value="option1">
-                                            <span class="custom-control-label">&nbsp;Se rappeler de moi</span>
+                                            <span class="custom-control-label">&nbsp;J'accepte les termes et conditions</span>
                                         </label>
-                                    </div>
-                                    <div class="col text-right">
-                                        <a href="<?=SITE_URL?>/remember">Mot de passe oublier ?</a>
                                     </div>
                                 </div>
                                 <div class="sign-btn text-center">
-                                    <button class="btn btn-theme">Sign In</button>
+                                    <button class="btn btn-theme">Creer le compte</button>
                                 </div>
                             </form>
                             <div class="register">
-                                <p>Vous n'avez pas un compte ? <a href="<?=SITE_URL?>/signup">Ouvrir un compte</a></p>
+                                <p>Vous avez un compte? <a href="<?=SITE_URL?>/login">Connectez vous</a></p>
                             </div>
                         </div>
                     </div>

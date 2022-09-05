@@ -1,0 +1,12 @@
+body{
+    margin: 0;
+    width: 100%;
+    overflow: hidden;
+}
+
+ul{
+    list-style: none;
+    display: inline-flex;
+    justify-content: space-between;
+    width:max-content;
+}

@@ -77,6 +77,10 @@ class WebreatheTestRoot
             $base_url = preg_replace("/[?&,!*`+²@<>$^#%)(\"_°]/", "", $base_url);
             $base_url = preg_replace("/^\//", "", $base_url);
 
+            if(isset($_POST) && isset($_POST['nonce_field'])) {
+                var_dump($_POST);
+            }
+
             if (in_array($base_url, $data->url->public->index, true)) {
                 $page   = (array) $data->url->public->page;
                 if (!isset($page[ $base_url ])) {
@@ -89,10 +93,10 @@ class WebreatheTestRoot
                     $base_url = '/';
                 }
 
-                if (ISession::get('session-start')) {
+                if (!ISession::get('session-start')) {
                     $screen = new AdminFront($page[ $base_url ]->title, $page[ $base_url ]);
                 } else {
-                    var_dump("off");
+                    header("location:". SITE_URL . '/login');
                 }
             } else {
                 echo IError::triggerError("404");
