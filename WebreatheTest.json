@@ -5,7 +5,7 @@
     "version":"1.0",
     "url":{
         "public":{
-            "index":["", "/","login", "help", "support"],
+            "index":["", "/","login", "signup", "help", "support"],
             "page":{
                 "":{
                     "title":"Home",
@@ -17,11 +17,18 @@
                     "name":"home",
                     "ico":""
                 },
+                "signup":{
+                    "title":"Sign up",
+                    "name":"sign up",
+                    "ico":""
+                },
+
                 "login":{
                     "title":"Login",
                     "name":"login",
                     "ico":""
                 },
+
                 "help":{
                     "title":"Help",
                     "name":"help",
