@@ -31,19 +31,6 @@ class WebreatheTestAdmin
     {
         global $skin;
         $skin = new Skin();
-        // switch (strtolower($this->getPage()->name)) {
-        //     case 'dashboard':
-        //         $skin = new ILogin();
-        //         break;
-
-        //     case 'services':
-        //         $skin = new ISignUp();
-        //         break;
-            
-        //     default:
-        //        var_dump("in")
-        //         break;
-        // }
         $skin->setHeaderData($this->getPage());
         $this->getContent();
     }

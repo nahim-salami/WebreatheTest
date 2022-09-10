@@ -34,6 +34,8 @@ try {
 
     $json_file = __DIR__ . '/WebreatheTest.json';
 
+    global $json_data;
+
     $json_data = getJsonFileData($json_file);
 
     if ($json_data) {

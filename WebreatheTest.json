@@ -42,21 +42,26 @@
             }
         },
         "admin":{
-            "index":["/","dashboard", "component", "manage"],
+            "index":["/","dashboard", "module", "manage", "account"],
             "page":{
-                "/":{
+                "/dashboard":{
                     "title":"Dashboard",
                     "name":"Dashboard",
                     "ico":""
                 },
-                "/component":{
-                    "title":"Component",
-                    "name":"component",
+                "/module":{
+                    "title":"Module",
+                    "name":"module",
                     "ico":""
                 },
                 "/manage":{
                     "title":"Manage",
                     "name":"manage",
+                    "ico":""
+                },
+                "/account":{
+                    "title":"Account",
+                    "name":"account",
                     "ico":""
                 }
             }

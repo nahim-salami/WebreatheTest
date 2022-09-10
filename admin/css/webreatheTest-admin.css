@@ -14,7 +14,7 @@ main{
 
 .main-content{
     padding: 30px 0;
-    background-color: #F6F7FB;
+    background-color: #ffffff;
     min-height: calc(100vh - 120px);
     padding-right: 15px;
     -moz-transition: all 0.3s ease;
@@ -30,4 +30,8 @@ main{
 .main-body{
     display: flex;
     justify-content: space-between;
+}
+
+.latest-update-card{
+    margin-top: 2em;
 }

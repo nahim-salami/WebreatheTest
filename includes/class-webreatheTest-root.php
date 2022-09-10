@@ -77,7 +77,7 @@ class WebreatheTestRoot
             $base_url = preg_replace("/[?&,!*`+²@<>$^#%)(\"_°]/", "", $base_url);
             $base_url = preg_replace("/^\//", "", $base_url);
 
-            if(isset($_POST) && isset($_POST['nonce_field'])) {
+            if (isset($_POST) && isset($_POST['nonce_field'])) {
                 var_dump($_POST);
             }
 
@@ -90,7 +90,11 @@ class WebreatheTestRoot
             } elseif (in_array($base_url, $data->url->admin->index, true)) {
                 $page   = (array) $data->url->admin->page;
                 if (!isset($page[ $base_url ])) {
-                    $base_url = '/';
+                    if (isset($page[ '/' . $base_url ])) {
+                        $base_url = '/' . $base_url;
+                    } else {
+                        $base_url = '/';
+                    }
                 }
 
                 if (!ISession::get('session-start')) {
