@@ -19,24 +19,44 @@ abstract class WebreatheTestTable
     public function initTable()
     {
         $user = "CREATE TABLE IF NOT EXISTS users (
-            users_id int(6) NOT NULL,
-            prenom varchar(24) NOT NULL,
-            nom varchar(24) NOT NULL,
+            users_id int(6) NOT NULL AUTO_INCREMENT,
+            prenom varchar(24) NULL,
+            nom varchar(24) NULL,
             adresse varchar(64) NULL,
-            mail varchar(64) NOT NULL,
-            tel varchar(14) NOT NULL,
-            date_naissance DATE NOT NULL,
+            mail varchar(64) NULL,
+            date_naissance DATE NULL,
             account_id int(10) NULL,
-            card_id int(24),
-            user_ifu int(32),
             PRIMARY KEY (users_id)
+        )ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci";
+
+        $account= "CREATE TABLE IF NOT EXISTS account (
+            account_id int(6) NOT NULL AUTO_INCREMENT,
+            username varchar(24) NULL,
+            account_type varchar(24) NULL,
+            user_password varchar(128) NULL,
+            date_creation DATE NULL,
+            users_id int(6),
+            PRIMARY KEY (account_id),
+            KEY (users_id)
+        )ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci";
+
+        $module = "CREATE TABLE IF NOT EXISTS module (
+            module_id int(6) NOT NULL,
+            nom_module varchar(24) NOT NULL,
+            nom varchar(24) NOT NULL,
+            status_module varchar(64) NULL,
+            date_creation_module DATE NOT NULL,
+            date_utilisation DATE NOT NULL,
+            PRIMARY KEY (module_id)
         )ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci";
 
         $db = $this->db;
         try {
-            // if (method_exists($db, "query")) {
-            //     $db->query($client);
-            // }
+            if (method_exists($db, "query")) {
+                $db->query($user);
+                $db->query($account);
+                $db->query($module);
+            }
         } catch (\Throwable $th) {
             $logs_src = dirname(__DIR__, 2) . DIR_SEPARATOR . SITE_DIRECTORY_NAME . DIR_SEPARATOR . '/errorlogs.imo';
             if (DISPLAY_ERROR) {
