@@ -8,49 +8,49 @@ use WebreatheTest\WebreatheTestError as IError;
  * @author Nahim SALAMI <nahim.salami@outlook.fr>
  * @since 1.0.0
  */
-class WebreatheTestPersonne
+abstract class WebreatheTestPersonne
 {
     /**
      * Nom de la personne.
      *
      * @var string
      */
-    private string $nom;
+    private $nom;
 
     /**
      * Prenom de la personne.
      *
      * @var string
      */
-    private string $prenom;
+    private $prenom;
 
     /**
      * Adresse de la personne.
      *
      * @var string
      */
-    private string $adresse;
+    private $adresse;
     
     /**
      * E-mail de la personne.
      *
      * @var string
      */
-    private string $mail;
+    private $mail;
 
     /**
      * Téléphone de la personne.
      *
      * @var string
      */
-    private string $tel;
+    private $tel;
 
     /**
      * Date de naissance de la personne.
      *
      * @var string
      */
-    private string $dateDeNaissance;
+    private $dateDeNaissance;
 
 
     /**
@@ -58,7 +58,7 @@ class WebreatheTestPersonne
      *
      * @var string
      */
-    private string $comptId;
+    private $comptId;
 
 
     public function __construct($nom = 'client', $prenom = 'client', $comptId = 0)

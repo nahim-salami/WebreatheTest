@@ -2,18 +2,22 @@
 
 namespace WebreatheTest;
 
+require dirname(__DIR__) . '/includes/class-webreatheTest-personne.php';
+require dirname(__DIR__) . '/includes/class-webreatheTest-user.php';
 require dirname(__DIR__) . '/admin/class-webreatheTest-admin.php';
 require dirname(__DIR__) . '/public/class-webreatheTest-public.php';
 
 use WebreatheTest\WebreatheTestError as IError;
 use WebreatheTest\app\WebreatheTestSession as ISession;
+use WebreatheTest\app\WebreatheFormControl as FormControl;
+use WebreatheTest\app\WebreatheTestUser as User;
 use WebreatheTest\app\WebreatheTestDatabase as IDatabase;
 use WebreatheTest\view\WebreatheTestPublic as PublicFront;
 use WebreatheTest\view\WebreatheTestAdmin as AdminFront;
 
 /**
  * Gestion du GET et et des différents pages correspondant.
- *
+ *²²
  * @link  http://app.WebreatheTest/
  * @since 1.0.0
  *
@@ -50,6 +54,10 @@ class WebreatheTestRoot
     {
         global $screen, $site_data;
         $site_data = $server_data;
+        ISession::start();
+        $db = new IDatabase();
+        $db->initDb();
+        $site_data['db'] = $db;
         if (isset($server_data['url'])) {
             $base_url = preg_replace("/localhost\//", "", $server_data['url']);
             $base_url = preg_replace(SITE_URL . "/", "", $base_url);
@@ -76,12 +84,22 @@ class WebreatheTestRoot
             $base_url = preg_replace("/" . $server_data['query'] . "/", "", $base_url);
             $base_url = preg_replace("/[?&,!*`+²@<>$^#%)(\"_°]/", "", $base_url);
             $base_url = preg_replace("/^\//", "", $base_url);
-
-            if (isset($_POST) && isset($_POST['nonce_field'])) {
-                var_dump($_POST);
+            if ('control/' === $base_url || 'control' === $base_url) {
+                if (isset($_GET['request']) && in_array($_GET['request'], FormControl::getRequestName())) {
+                    if (isset($_POST['nonce']) && verifyNonceSecurity($_POST['nonce'])) {
+                        if (isset($_POST) && !empty($_POST)) {
+                            FormControl::onPost();
+                        }
+        
+                        if (isset($_GET) && !empty($_GET)) {
+                            FormControl::onGet();
+                        }
+                    }
+                    return;
+                }
             }
 
-            if (in_array($base_url, $data->url->public->index, true)) {
+            if (in_array($base_url, $data->url->public->index, true) && !$this->sessionStart()) {
                 $page   = (array) $data->url->public->page;
                 if (!isset($page[ $base_url ])) {
                     $base_url = '/';
@@ -97,11 +115,13 @@ class WebreatheTestRoot
                     }
                 }
 
-                if (!ISession::get('session-start')) {
+                if ($this->sessionStart()) {
                     $screen = new AdminFront($page[ $base_url ]->title, $page[ $base_url ]);
                 } else {
                     header("location:". SITE_URL . '/login');
                 }
+            } elseif ($this->sessionStart()) {
+                header("location:". SITE_URL . '/dashboard');
             } else {
                 echo IError::triggerError("404");
             }
@@ -117,12 +137,21 @@ class WebreatheTestRoot
         }
     }
 
+    public function sessionStart()
+    {
+        if (ISession::get('accountSession', 2) && ISession::get('accountid', 2) && ISession::get('accountKey', 2)) {
+            $user = new User(ISession::get('accountid', 2), ISession::get('accountKey', 2), 'login');
+            if ($user->isLogin()) {
+                return true;
+            }
+        }
+        return false;
+    }
+
     public static function start()
     {
         global $screen, $site_data;
-        ISession::init();
-        $db = new IDatabase();
-        $site_data['db'] = $db;
+        $db = $site_data['db'];
 
         if (!$db->initDb()) {
             IError::triggerError("bd");

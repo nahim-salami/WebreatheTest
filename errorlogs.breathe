@@ -81,3 +81,247 @@ Stack trace:
 22-08-29 17:43:04  Error: Call to undefined function r() in C:\wamp64\www\WebreatheTest\WebreatheTest.php:32
 Stack trace:
 #0 {main}
+
+22-09-11 10:21:28  Error: Class 'WebreatheTestSession' not found in C:\wamp64\www\WebreatheTest\includes\functions.php:46
+Stack trace:
+#0 C:\wamp64\www\WebreatheTest\includes\skins\class-login-skin.php(99): createNonceSecurity()
+#1 C:\wamp64\www\WebreatheTest\includes\skins\class-login-skin.php(35): WebreatheTest\skin\WebreatheTestLogin->getContent()
+#2 C:\wamp64\www\WebreatheTest\public\class-webreatheTest-public.php(51): WebreatheTest\skin\WebreatheTestLogin->initSkin()
+#3 C:\wamp64\www\WebreatheTest\includes\class-webreatheTest-root.php(129): WebreatheTest\view\WebreatheTestPublic->initSkin()
+#4 C:\wamp64\www\WebreatheTest\WebreatheTest.php(49): WebreatheTest\WebreatheTestRoot::start()
+#5 {main}
+
+22-09-11 10:22:34  Error: Class 'WebreatheTestSession' not found in C:\wamp64\www\WebreatheTest\includes\functions.php:46
+Stack trace:
+#0 C:\wamp64\www\WebreatheTest\includes\skins\class-login-skin.php(99): createNonceSecurity()
+#1 C:\wamp64\www\WebreatheTest\includes\skins\class-login-skin.php(35): WebreatheTest\skin\WebreatheTestLogin->getContent()
+#2 C:\wamp64\www\WebreatheTest\public\class-webreatheTest-public.php(51): WebreatheTest\skin\WebreatheTestLogin->initSkin()
+#3 C:\wamp64\www\WebreatheTest\includes\class-webreatheTest-root.php(129): WebreatheTest\view\WebreatheTestPublic->initSkin()
+#4 C:\wamp64\www\WebreatheTest\WebreatheTest.php(49): WebreatheTest\WebreatheTestRoot::start()
+#5 {main}
+
+22-09-11 10:23:18  Error: Class 'WebreatheTestSession' not found in C:\wamp64\www\WebreatheTest\includes\functions.php:46
+Stack trace:
+#0 C:\wamp64\www\WebreatheTest\includes\skins\class-login-skin.php(99): createNonceSecurity()
+#1 C:\wamp64\www\WebreatheTest\includes\skins\class-login-skin.php(35): WebreatheTest\skin\WebreatheTestLogin->getContent()
+#2 C:\wamp64\www\WebreatheTest\public\class-webreatheTest-public.php(51): WebreatheTest\skin\WebreatheTestLogin->initSkin()
+#3 C:\wamp64\www\WebreatheTest\includes\class-webreatheTest-root.php(129): WebreatheTest\view\WebreatheTestPublic->initSkin()
+#4 C:\wamp64\www\WebreatheTest\WebreatheTest.php(49): WebreatheTest\WebreatheTestRoot::start()
+#5 {main}
+
+22-09-11 10:46:33  Error: Class 'WebreatheTestSession' not found in C:\wamp64\www\WebreatheTest\includes\functions.php:46
+Stack trace:
+#0 C:\wamp64\www\WebreatheTest\includes\skins\class-login-skin.php(21): createNonceSecurity()
+#1 C:\wamp64\www\WebreatheTest\public\class-webreatheTest-public.php(51): WebreatheTest\skin\WebreatheTestLogin->initSkin()
+#2 C:\wamp64\www\WebreatheTest\includes\class-webreatheTest-root.php(129): WebreatheTest\view\WebreatheTestPublic->initSkin()
+#3 C:\wamp64\www\WebreatheTest\WebreatheTest.php(49): WebreatheTest\WebreatheTestRoot::start()
+#4 {main}
+
+22-09-11 11:44:22  Error: Class 'WebreatheTest\WebreatheFormControl' not found in C:\wamp64\www\WebreatheTest\includes\class-webreatheTest-root.php:82
+Stack trace:
+#0 C:\wamp64\www\WebreatheTest\WebreatheTest.php(47): WebreatheTest\WebreatheTestRoot->parseServerData(Array, Object(stdClass))
+#1 {main}
+
+22-09-11 11:44:49  Error: Class 'WebreatheTest\WebreatheFormControl' not found in C:\wamp64\www\WebreatheTest\includes\class-webreatheTest-root.php:82
+Stack trace:
+#0 C:\wamp64\www\WebreatheTest\WebreatheTest.php(47): WebreatheTest\WebreatheTestRoot->parseServerData(Array, Object(stdClass))
+#1 {main}
+
+22-09-11 11:44:50  Error: Class 'WebreatheTest\WebreatheFormControl' not found in C:\wamp64\www\WebreatheTest\includes\class-webreatheTest-root.php:82
+Stack trace:
+#0 C:\wamp64\www\WebreatheTest\WebreatheTest.php(47): WebreatheTest\WebreatheTestRoot->parseServerData(Array, Object(stdClass))
+#1 {main}
+
+22-09-11 11:44:50  Error: Class 'WebreatheTest\WebreatheFormControl' not found in C:\wamp64\www\WebreatheTest\includes\class-webreatheTest-root.php:82
+Stack trace:
+#0 C:\wamp64\www\WebreatheTest\WebreatheTest.php(47): WebreatheTest\WebreatheTestRoot->parseServerData(Array, Object(stdClass))
+#1 {main}
+
+22-09-11 11:44:50  Error: Class 'WebreatheTest\WebreatheFormControl' not found in C:\wamp64\www\WebreatheTest\includes\class-webreatheTest-root.php:82
+Stack trace:
+#0 C:\wamp64\www\WebreatheTest\WebreatheTest.php(47): WebreatheTest\WebreatheTestRoot->parseServerData(Array, Object(stdClass))
+#1 {main}
+
+22-09-11 11:45:30  Error: Class 'WebreatheTest\WebreatheFormControl' not found in C:\wamp64\www\WebreatheTest\includes\class-webreatheTest-root.php:82
+Stack trace:
+#0 C:\wamp64\www\WebreatheTest\WebreatheTest.php(47): WebreatheTest\WebreatheTestRoot->parseServerData(Array, Object(stdClass))
+#1 {main}
+
+22-09-11 11:45:31  Error: Class 'WebreatheTest\WebreatheFormControl' not found in C:\wamp64\www\WebreatheTest\includes\class-webreatheTest-root.php:82
+Stack trace:
+#0 C:\wamp64\www\WebreatheTest\WebreatheTest.php(47): WebreatheTest\WebreatheTestRoot->parseServerData(Array, Object(stdClass))
+#1 {main}
+
+22-09-11 11:46:03  Error: Class 'WebreatheTest\WebreatheFormControl' not found in C:\wamp64\www\WebreatheTest\includes\class-webreatheTest-root.php:82
+Stack trace:
+#0 C:\wamp64\www\WebreatheTest\WebreatheTest.php(47): WebreatheTest\WebreatheTestRoot->parseServerData(Array, Object(stdClass))
+#1 {main}
+
+22-09-11 11:46:04  Error: Class 'WebreatheTest\WebreatheFormControl' not found in C:\wamp64\www\WebreatheTest\includes\class-webreatheTest-root.php:82
+Stack trace:
+#0 C:\wamp64\www\WebreatheTest\WebreatheTest.php(47): WebreatheTest\WebreatheTestRoot->parseServerData(Array, Object(stdClass))
+#1 {main}
+
+22-09-11 11:46:04  Error: Class 'WebreatheTest\WebreatheFormControl' not found in C:\wamp64\www\WebreatheTest\includes\class-webreatheTest-root.php:82
+Stack trace:
+#0 C:\wamp64\www\WebreatheTest\WebreatheTest.php(47): WebreatheTest\WebreatheTestRoot->parseServerData(Array, Object(stdClass))
+#1 {main}
+
+22-09-11 11:47:54  Error: Class 'WebreatheTest\WebreatheFormControl' not found in C:\wamp64\www\WebreatheTest\includes\class-webreatheTest-root.php:82
+Stack trace:
+#0 C:\wamp64\www\WebreatheTest\WebreatheTest.php(47): WebreatheTest\WebreatheTestRoot->parseServerData(Array, Object(stdClass))
+#1 {main}
+
+22-09-11 11:47:55  Error: Class 'WebreatheTest\WebreatheFormControl' not found in C:\wamp64\www\WebreatheTest\includes\class-webreatheTest-root.php:82
+Stack trace:
+#0 C:\wamp64\www\WebreatheTest\WebreatheTest.php(47): WebreatheTest\WebreatheTestRoot->parseServerData(Array, Object(stdClass))
+#1 {main}
+
+22-09-11 11:49:11  Error: Class 'WebreatheTest\WebreatheFormControl' not found in C:\wamp64\www\WebreatheTest\includes\class-webreatheTest-root.php:82
+Stack trace:
+#0 C:\wamp64\www\WebreatheTest\WebreatheTest.php(47): WebreatheTest\WebreatheTestRoot->parseServerData(Array, Object(stdClass))
+#1 {main}
+
+22-09-11 11:49:13  Error: Class 'WebreatheTest\WebreatheFormControl' not found in C:\wamp64\www\WebreatheTest\includes\class-webreatheTest-root.php:82
+Stack trace:
+#0 C:\wamp64\www\WebreatheTest\WebreatheTest.php(47): WebreatheTest\WebreatheTestRoot->parseServerData(Array, Object(stdClass))
+#1 {main}
+
+22-09-11 11:49:13  Error: Class 'WebreatheTest\WebreatheFormControl' not found in C:\wamp64\www\WebreatheTest\includes\class-webreatheTest-root.php:82
+Stack trace:
+#0 C:\wamp64\www\WebreatheTest\WebreatheTest.php(47): WebreatheTest\WebreatheTestRoot->parseServerData(Array, Object(stdClass))
+#1 {main}
+
+22-09-11 11:49:13  Error: Class 'WebreatheTest\WebreatheFormControl' not found in C:\wamp64\www\WebreatheTest\includes\class-webreatheTest-root.php:82
+Stack trace:
+#0 C:\wamp64\www\WebreatheTest\WebreatheTest.php(47): WebreatheTest\WebreatheTestRoot->parseServerData(Array, Object(stdClass))
+#1 {main}
+
+22-09-11 11:49:13  Error: Class 'WebreatheTest\WebreatheFormControl' not found in C:\wamp64\www\WebreatheTest\includes\class-webreatheTest-root.php:82
+Stack trace:
+#0 C:\wamp64\www\WebreatheTest\WebreatheTest.php(47): WebreatheTest\WebreatheTestRoot->parseServerData(Array, Object(stdClass))
+#1 {main}
+
+22-09-11 11:49:14  Error: Class 'WebreatheTest\WebreatheFormControl' not found in C:\wamp64\www\WebreatheTest\includes\class-webreatheTest-root.php:82
+Stack trace:
+#0 C:\wamp64\www\WebreatheTest\WebreatheTest.php(47): WebreatheTest\WebreatheTestRoot->parseServerData(Array, Object(stdClass))
+#1 {main}
+
+22-09-11 11:49:14  Error: Class 'WebreatheTest\WebreatheFormControl' not found in C:\wamp64\www\WebreatheTest\includes\class-webreatheTest-root.php:82
+Stack trace:
+#0 C:\wamp64\www\WebreatheTest\WebreatheTest.php(47): WebreatheTest\WebreatheTestRoot->parseServerData(Array, Object(stdClass))
+#1 {main}
+
+22-09-11 15:57:23  Error: Class 'WebreatheTest\app\WebreatheTestUser' not found in C:\wamp64\www\WebreatheTest\includes\class-webreatheTest-form-control.php:13
+Stack trace:
+#0 C:\wamp64\www\WebreatheTest\includes\class-webreatheTest-root.php(84): WebreatheTest\app\WebreatheFormControl::onPost()
+#1 C:\wamp64\www\WebreatheTest\WebreatheTest.php(47): WebreatheTest\WebreatheTestRoot->parseServerData(Array, Object(stdClass))
+#2 {main}
+
+22-09-11 15:59:53  ArgumentCountError: Too few arguments to function WebreatheTest\app\WebreatheTestPersonne::verifyString(), 1 passed in C:\wamp64\www\WebreatheTest\includes\class-webreatheTest-user.php on line 21 and exactly 2 expected in C:\wamp64\www\WebreatheTest\includes\class-webreatheTest-personne.php:240
+Stack trace:
+#0 C:\wamp64\www\WebreatheTest\includes\class-webreatheTest-user.php(21): WebreatheTest\app\WebreatheTestPersonne::verifyString('zefz')
+#1 C:\wamp64\www\WebreatheTest\includes\class-webreatheTest-form-control.php(15): WebreatheTest\app\WebreatheTestUser->__construct('zefz', '123456zeffe')
+#2 C:\wamp64\www\WebreatheTest\includes\class-webreatheTest-root.php(84): WebreatheTest\app\WebreatheFormControl::onPost()
+#3 C:\wamp64\www\WebreatheTest\WebreatheTest.php(47): WebreatheTest\WebreatheTestRoot->parseServerData(Array, Object(stdClass))
+#4 {main}
+
+22-09-11 16:00:37  ArgumentCountError: Too few arguments to function WebreatheTest\app\WebreatheTestPersonne::verifyString(), 1 passed in C:\wamp64\www\WebreatheTest\includes\class-webreatheTest-user.php on line 22 and exactly 2 expected in C:\wamp64\www\WebreatheTest\includes\class-webreatheTest-personne.php:240
+Stack trace:
+#0 C:\wamp64\www\WebreatheTest\includes\class-webreatheTest-user.php(22): WebreatheTest\app\WebreatheTestPersonne::verifyString('zefz')
+#1 C:\wamp64\www\WebreatheTest\includes\class-webreatheTest-form-control.php(15): WebreatheTest\app\WebreatheTestUser->__construct('zefz', '123456zeffe')
+#2 C:\wamp64\www\WebreatheTest\includes\class-webreatheTest-root.php(84): WebreatheTest\app\WebreatheFormControl::onPost()
+#3 C:\wamp64\www\WebreatheTest\WebreatheTest.php(47): WebreatheTest\WebreatheTestRoot->parseServerData(Array, Object(stdClass))
+#4 {main}
+
+22-09-11 16:01:54  ArgumentCountError: Too few arguments to function WebreatheTest\app\WebreatheTestPersonne::verifyString(), 1 passed in C:\wamp64\www\WebreatheTest\includes\class-webreatheTest-user.php on line 22 and exactly 2 expected in C:\wamp64\www\WebreatheTest\includes\class-webreatheTest-personne.php:240
+Stack trace:
+#0 C:\wamp64\www\WebreatheTest\includes\class-webreatheTest-user.php(22): WebreatheTest\app\WebreatheTestPersonne::verifyString('zefz')
+#1 C:\wamp64\www\WebreatheTest\includes\class-webreatheTest-form-control.php(15): WebreatheTest\app\WebreatheTestUser->__construct('zefz', '123456zeffe')
+#2 C:\wamp64\www\WebreatheTest\includes\class-webreatheTest-root.php(86): WebreatheTest\app\WebreatheFormControl::onPost()
+#3 C:\wamp64\www\WebreatheTest\WebreatheTest.php(47): WebreatheTest\WebreatheTestRoot->parseServerData(Array, Object(stdClass))
+#4 {main}
+
+22-09-11 17:12:39  Error: Call to undefined method WebreatheTest\app\WebreatheTestDatabase::prepare() in C:\wamp64\www\WebreatheTest\includes\class-webreatheTest-user.php:24
+Stack trace:
+#0 C:\wamp64\www\WebreatheTest\includes\class-webreatheTest-form-control.php(16): WebreatheTest\app\WebreatheTestUser->__construct('zefz', '123456')
+#1 C:\wamp64\www\WebreatheTest\includes\class-webreatheTest-root.php(86): WebreatheTest\app\WebreatheFormControl::onPost()
+#2 C:\wamp64\www\WebreatheTest\WebreatheTest.php(47): WebreatheTest\WebreatheTestRoot->parseServerData(Array, Object(stdClass))
+#3 {main}
+
+22-09-11 17:13:36  Error: Call to a member function prepare() on null in C:\wamp64\www\WebreatheTest\includes\class-webreatheTest-user.php:24
+Stack trace:
+#0 C:\wamp64\www\WebreatheTest\includes\class-webreatheTest-form-control.php(16): WebreatheTest\app\WebreatheTestUser->__construct('zefz', '123456')
+#1 C:\wamp64\www\WebreatheTest\includes\class-webreatheTest-root.php(86): WebreatheTest\app\WebreatheFormControl::onPost()
+#2 C:\wamp64\www\WebreatheTest\WebreatheTest.php(47): WebreatheTest\WebreatheTestRoot->parseServerData(Array, Object(stdClass))
+#3 {main}
+
+22-09-11 17:14:24  Error: Call to a member function prepare() on null in C:\wamp64\www\WebreatheTest\includes\class-webreatheTest-user.php:25
+Stack trace:
+#0 C:\wamp64\www\WebreatheTest\includes\class-webreatheTest-form-control.php(16): WebreatheTest\app\WebreatheTestUser->__construct('zefz', '123456')
+#1 C:\wamp64\www\WebreatheTest\includes\class-webreatheTest-root.php(86): WebreatheTest\app\WebreatheFormControl::onPost()
+#2 C:\wamp64\www\WebreatheTest\WebreatheTest.php(47): WebreatheTest\WebreatheTestRoot->parseServerData(Array, Object(stdClass))
+#3 {main}
+
+22-09-11 17:14:24  Error: Call to a member function prepare() on null in C:\wamp64\www\WebreatheTest\includes\class-webreatheTest-user.php:25
+Stack trace:
+#0 C:\wamp64\www\WebreatheTest\includes\class-webreatheTest-form-control.php(16): WebreatheTest\app\WebreatheTestUser->__construct('zefz', '123456')
+#1 C:\wamp64\www\WebreatheTest\includes\class-webreatheTest-root.php(86): WebreatheTest\app\WebreatheFormControl::onPost()
+#2 C:\wamp64\www\WebreatheTest\WebreatheTest.php(47): WebreatheTest\WebreatheTestRoot->parseServerData(Array, Object(stdClass))
+#3 {main}
+
+22-09-11 17:25:58  Error: Call to a member function fetchColumn() on boolean in C:\wamp64\www\WebreatheTest\includes\class-webreatheTest-user.php:53
+Stack trace:
+#0 C:\wamp64\www\WebreatheTest\includes\class-webreatheTest-user.php(21): WebreatheTest\app\WebreatheTestUser->checkUserExiste('zefz')
+#1 C:\wamp64\www\WebreatheTest\includes\class-webreatheTest-form-control.php(16): WebreatheTest\app\WebreatheTestUser->__construct('zefz', '123456')
+#2 C:\wamp64\www\WebreatheTest\includes\class-webreatheTest-root.php(87): WebreatheTest\app\WebreatheFormControl::onPost()
+#3 C:\wamp64\www\WebreatheTest\WebreatheTest.php(47): WebreatheTest\WebreatheTestRoot->parseServerData(Array, Object(stdClass))
+#4 {main}
+
+22-09-11 17:25:59  Error: Call to a member function fetchColumn() on boolean in C:\wamp64\www\WebreatheTest\includes\class-webreatheTest-user.php:53
+Stack trace:
+#0 C:\wamp64\www\WebreatheTest\includes\class-webreatheTest-user.php(21): WebreatheTest\app\WebreatheTestUser->checkUserExiste('zefz')
+#1 C:\wamp64\www\WebreatheTest\includes\class-webreatheTest-form-control.php(16): WebreatheTest\app\WebreatheTestUser->__construct('zefz', '123456')
+#2 C:\wamp64\www\WebreatheTest\includes\class-webreatheTest-root.php(87): WebreatheTest\app\WebreatheFormControl::onPost()
+#3 C:\wamp64\www\WebreatheTest\WebreatheTest.php(47): WebreatheTest\WebreatheTestRoot->parseServerData(Array, Object(stdClass))
+#4 {main}
+
+22-09-11 17:26:32  Error: Call to a member function fetchAll() on boolean in C:\wamp64\www\WebreatheTest\includes\class-webreatheTest-user.php:53
+Stack trace:
+#0 C:\wamp64\www\WebreatheTest\includes\class-webreatheTest-user.php(21): WebreatheTest\app\WebreatheTestUser->checkUserExiste('zefz')
+#1 C:\wamp64\www\WebreatheTest\includes\class-webreatheTest-form-control.php(16): WebreatheTest\app\WebreatheTestUser->__construct('zefz', '123456')
+#2 C:\wamp64\www\WebreatheTest\includes\class-webreatheTest-root.php(87): WebreatheTest\app\WebreatheFormControl::onPost()
+#3 C:\wamp64\www\WebreatheTest\WebreatheTest.php(47): WebreatheTest\WebreatheTestRoot->parseServerData(Array, Object(stdClass))
+#4 {main}
+
+22-09-11 17:26:33  Error: Call to a member function fetchAll() on boolean in C:\wamp64\www\WebreatheTest\includes\class-webreatheTest-user.php:53
+Stack trace:
+#0 C:\wamp64\www\WebreatheTest\includes\class-webreatheTest-user.php(21): WebreatheTest\app\WebreatheTestUser->checkUserExiste('zefz')
+#1 C:\wamp64\www\WebreatheTest\includes\class-webreatheTest-form-control.php(16): WebreatheTest\app\WebreatheTestUser->__construct('zefz', '123456')
+#2 C:\wamp64\www\WebreatheTest\includes\class-webreatheTest-root.php(87): WebreatheTest\app\WebreatheFormControl::onPost()
+#3 C:\wamp64\www\WebreatheTest\WebreatheTest.php(47): WebreatheTest\WebreatheTestRoot->parseServerData(Array, Object(stdClass))
+#4 {main}
+
+22-09-11 17:26:33  Error: Call to a member function fetchAll() on boolean in C:\wamp64\www\WebreatheTest\includes\class-webreatheTest-user.php:53
+Stack trace:
+#0 C:\wamp64\www\WebreatheTest\includes\class-webreatheTest-user.php(21): WebreatheTest\app\WebreatheTestUser->checkUserExiste('zefz')
+#1 C:\wamp64\www\WebreatheTest\includes\class-webreatheTest-form-control.php(16): WebreatheTest\app\WebreatheTestUser->__construct('zefz', '123456')
+#2 C:\wamp64\www\WebreatheTest\includes\class-webreatheTest-root.php(87): WebreatheTest\app\WebreatheFormControl::onPost()
+#3 C:\wamp64\www\WebreatheTest\WebreatheTest.php(47): WebreatheTest\WebreatheTestRoot->parseServerData(Array, Object(stdClass))
+#4 {main}
+
+22-09-11 17:37:56  Error: Call to a member function rowCount() on array in C:\wamp64\www\WebreatheTest\includes\class-webreatheTest-user.php:55
+Stack trace:
+#0 C:\wamp64\www\WebreatheTest\includes\class-webreatheTest-user.php(21): WebreatheTest\app\WebreatheTestUser->checkUserExiste('zefz')
+#1 C:\wamp64\www\WebreatheTest\includes\class-webreatheTest-form-control.php(16): WebreatheTest\app\WebreatheTestUser->__construct('zefz', '123456')
+#2 C:\wamp64\www\WebreatheTest\includes\class-webreatheTest-root.php(87): WebreatheTest\app\WebreatheFormControl::onPost()
+#3 C:\wamp64\www\WebreatheTest\WebreatheTest.php(47): WebreatheTest\WebreatheTestRoot->parseServerData(Array, Object(stdClass))
+#4 {main}
+
+22-09-11 17:38:31  Error: Call to a member function rowCount() on string in C:\wamp64\www\WebreatheTest\includes\class-webreatheTest-user.php:55
+Stack trace:
+#0 C:\wamp64\www\WebreatheTest\includes\class-webreatheTest-user.php(21): WebreatheTest\app\WebreatheTestUser->checkUserExiste('zefz')
+#1 C:\wamp64\www\WebreatheTest\includes\class-webreatheTest-form-control.php(16): WebreatheTest\app\WebreatheTestUser->__construct('zefz', '123456')
+#2 C:\wamp64\www\WebreatheTest\includes\class-webreatheTest-root.php(87): WebreatheTest\app\WebreatheFormControl::onPost()
+#3 C:\wamp64\www\WebreatheTest\WebreatheTest.php(47): WebreatheTest\WebreatheTestRoot->parseServerData(Array, Object(stdClass))
+#4 {main}

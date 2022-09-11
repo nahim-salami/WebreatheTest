@@ -1,5 +1,7 @@
 <?php
 
+use WebreatheTest\app\WebreatheTestSession as ISession;
+
 /**
  * Get json filte datas
  * @param string $files files path
@@ -43,14 +45,44 @@ function createNonceSecurity()
         $nonce .= random_int(0, 9);
     }
 
-    $_SESSION["nonce_security"] = $nonce;
+    $activeNonce = ISession::get('nonce_security', 2);
+    $activeNonceTime = ISession::get('nonce_time', 2);
+
+    if (! is_array($activeNonce)) {
+        $activeNonce = array();
+    }
+
+    if (! is_array($activeNonceTime)) {
+        $activeNonceTime = array();
+    }
+
+    $expire_day = strtotime('+1 day', strtotime(date("Y-m-d")));
+
+    $activeNonceTime[$nonce] = $expire_day;
+
+    array_push($activeNonce, $nonce);
+
+    ISession::set('nonce_security', $activeNonce, 2);
+    ISession::set('nonce_time', $activeNonceTime, 2);
     return $nonce;
 }
 
 function verifyNonceSecurity($nonce)
 {
-    if (isset($_SESSION["nonce_security"]) && $nonce === $_SESSION["nonce_security"]) {
-        return true;
+    $activeNonce = ISession::get('nonce_security', 2);
+    if (is_array($activeNonce)) {
+        if (in_array($nonce, $activeNonce)) {
+            $activeNonceTime = ISession::get('nonce_time', 2);
+            if (isset($activeNonceTime[$nonce]) && is_array($activeNonceTime))
+            {
+                $dateNow = strtotime(date("Y-m-d"));
+                if ($dateNow > $activeNonceTime[$nonce]) {
+                    return false;
+                } else {
+                    return true;
+                }
+            }
+        }
     }
 
     return false;

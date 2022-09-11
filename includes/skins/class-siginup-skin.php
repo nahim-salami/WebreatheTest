@@ -72,13 +72,13 @@ class WebreatheTestSignUp implements Skin
                         <div class="authentication-form mx-auto">
                             <h3>Vous êtes nouveau</h3>
                             <p>Rejoignez WEBREATHE</p>
-                            <form action="<?=SITE_URL?>/control" method="POST">
+                            <form action="<?=SITE_URL?>/control/?request=signup" method="POST">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="johndoe@admin.com" required="" value="">
+                                    <input type="text" class="form-control" name="login" placeholder="johndoe@admin.com" required="" value="">
                                     <i class="ik ik-user"></i>
                                 </div>
                                 <div class="form-group">
-                                    <input type="password" class="form-control" placeholder="Password" required="" value="123456">
+                                    <input type="password" class="form-control" name="pass" placeholder="Password" required="" value="123456">
                                     <i class="ik ik-lock"></i>
                                 </div>
                                 <div class="form-group">
@@ -94,8 +94,9 @@ class WebreatheTestSignUp implements Skin
                                     </div>
                                 </div>
                                 <div class="sign-btn text-center">
-                                    <button class="btn btn-theme">Creer le compte</button>
+                                    <button class="btn" type="submit">Creer le compte</button>
                                 </div>
+                                <input type="hidden" name="nonce" value="<?=createNonceSecurity()?>">
                             </form>
                             <div class="register">
                                 <p>Vous avez un compte? <a href="<?=SITE_URL?>/login">Connectez vous</a></p>

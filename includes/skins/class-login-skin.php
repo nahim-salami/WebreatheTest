@@ -18,7 +18,6 @@ class WebreatheTestLogin implements Skin
     public function initSkin()
     {
         global $site_data;
-
         ob_start();
         ?>
         <html lang="fr">
@@ -72,13 +71,13 @@ class WebreatheTestLogin implements Skin
                         <div class="authentication-form mx-auto">
                             <h3>Connectez vous à WEBREATHE</h3>
                             <p>Ravie de vous revoir !!</p>
-                            <form action="<?=SITE_URL?>/control" method="POST">
+                            <form action="<?=SITE_URL?>/control/?request=login" method="POST">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="johndoe@admin.com" required="" value="">
+                                    <input type="text" class="form-control" name="login" placeholder="johndoe@admin.com" required="" value="">
                                     <i class="ik ik-user"></i>
                                 </div>
                                 <div class="form-group">
-                                    <input type="password" class="form-control" placeholder="Password" required="" value="123456">
+                                    <input type="password" class="form-control" name="pass" placeholder="Password" required="" value="123456">
                                     <i class="ik ik-lock"></i>
                                 </div>
                                 <div class="row">
@@ -93,8 +92,10 @@ class WebreatheTestLogin implements Skin
                                     </div>
                                 </div>
                                 <div class="sign-btn text-center">
-                                    <button class="btn btn-theme">Sign In</button>
+                                    <button class="btn" type="submit">Sign In</button>
                                 </div>
+
+                                <input type="hidden" name="nonce" value="<?=createNonceSecurity()?>">
                             </form>
                             <div class="register">
                                 <p>Vous n'avez pas un compte ? <a href="<?=SITE_URL?>/signup">Ouvrir un compte</a></p>
