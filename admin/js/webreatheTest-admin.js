@@ -25,6 +25,14 @@ $(document).ready(function(){
                 let response = {};
                 if(is_json(data)) {
                     response = JSON.parse(data);
+                    if(response.temperature > 60) {
+                        alert("Une erreur est survenue. Veuillez redémarrer votre appareil.");
+                    }
+
+                    if(response.vitesse < 10) {
+                        alert("Votre connexion est trop lente. Veuillez redémarer votre appareil");
+                    }
+                    
                     $(".temperature").text(response.temperature + ' °C');
                     $(".vitese").text(response.vitesse + ' Kb/s');
                     $(".send-data").text(response.nombreDonne);
