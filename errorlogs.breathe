@@ -325,3 +325,11 @@ Stack trace:
 #2 C:\wamp64\www\WebreatheTest\includes\class-webreatheTest-root.php(87): WebreatheTest\app\WebreatheFormControl::onPost()
 #3 C:\wamp64\www\WebreatheTest\WebreatheTest.php(47): WebreatheTest\WebreatheTestRoot->parseServerData(Array, Object(stdClass))
 #4 {main}
+
+22-09-17 19:27:21  Error: Using $this when not in object context in C:\wamp64\www\WebreatheTest\admin\class-module.php:27
+Stack trace:
+#0 C:\wamp64\www\WebreatheTest\includes\functions.php(178): WebreatheTest\app\WebreatheTestModule::getTailleDonne()
+#1 [internal function]: getModuleData()
+#2 C:\wamp64\www\WebreatheTest\includes\class-webreatheTest-root.php(92): call_user_func('getModuleData')
+#3 C:\wamp64\www\WebreatheTest\WebreatheTest.php(47): WebreatheTest\WebreatheTestRoot->parseServerData(Array, Object(stdClass))
+#4 {main}

@@ -5,7 +5,7 @@
     "version":"1.0",
     "url":{
         "public":{
-            "index":["", "/","login", "signup", "help", "support"],
+            "index":["", "/","login", "signup"],
             "page":{
                 "":{
                     "title":"Home",
@@ -27,41 +27,20 @@
                     "title":"Login",
                     "name":"login",
                     "ico":""
-                },
-
-                "help":{
-                    "title":"Help",
-                    "name":"help",
-                    "ico":""
-                },
-                "support":{
-                    "title":"Support",
-                    "name":"support",
-                    "ico":""
                 }
             }
         },
         "admin":{
-            "index":["/","dashboard", "module", "manage", "account"],
+            "index":["/","dashboard", "logout"],
             "page":{
                 "/dashboard":{
                     "title":"Dashboard",
                     "name":"Dashboard",
                     "ico":""
                 },
-                "/module":{
-                    "title":"Module",
-                    "name":"module",
-                    "ico":""
-                },
-                "/manage":{
-                    "title":"Manage",
-                    "name":"manage",
-                    "ico":""
-                },
-                "/account":{
-                    "title":"Account",
-                    "name":"account",
+                "/logout":{
+                    "title":"Log out",
+                    "name":"logout",
                     "ico":""
                 }
             }

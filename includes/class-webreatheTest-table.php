@@ -41,13 +41,26 @@ abstract class WebreatheTestTable
         )ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci";
 
         $module = "CREATE TABLE IF NOT EXISTS module (
-            module_id int(6) NOT NULL,
+            module_id int(6) NOT NULL AUTO_INCREMENT,
             nom_module varchar(24) NOT NULL,
-            nom varchar(24) NOT NULL,
+            type_donnee varchar(24) NULL,
+            cle_module varchar(128) NULL,
+            desc_module varchar(128) NULL,
+            url_module varchar(128) NOT NULL,   
             status_module varchar(64) NULL,
             date_creation_module DATE NOT NULL,
             date_utilisation DATE NOT NULL,
             PRIMARY KEY (module_id)
+        )ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci";
+
+        $moduleData = "CREATE TABLE IF NOT EXISTS moduleData (
+            data_id int(6) NOT NULL AUTO_INCREMENT,
+            module_id int(6) NOT NULL,
+            request varchar(12) NOT NULL,
+            module_data varchar(256) NOT NULL,
+            date_time DATETIME NOT NULL,
+            PRIMARY KEY (data_id),
+            KEY (module_id)
         )ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci";
 
         $db = $this->db;
@@ -56,6 +69,7 @@ abstract class WebreatheTestTable
                 $db->query($user);
                 $db->query($account);
                 $db->query($module);
+                $db->query($moduleData);
             }
         } catch (\Throwable $th) {
             $logs_src = dirname(__DIR__, 2) . DIR_SEPARATOR . SITE_DIRECTORY_NAME . DIR_SEPARATOR . '/errorlogs.imo';

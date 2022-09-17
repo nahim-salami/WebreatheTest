@@ -3,6 +3,7 @@
 try {
     require dirname(__DIR__) . DIR_SEPARATOR . SITE_DIRECTORY_NAME . DIR_SEPARATOR . 'error.php';
     require dirname(__DIR__) . DIR_SEPARATOR . SITE_DIRECTORY_NAME . DIR_SEPARATOR . 'includes/class-webreatheTest-session.php';
+    require dirname(__DIR__) . DIR_SEPARATOR . SITE_DIRECTORY_NAME . DIR_SEPARATOR . 'admin/class-module.php';
     require dirname(__DIR__) . DIR_SEPARATOR . SITE_DIRECTORY_NAME . DIR_SEPARATOR . 'includes/functions.php';
     require dirname(__DIR__) . DIR_SEPARATOR . SITE_DIRECTORY_NAME . DIR_SEPARATOR . 'includes/class-webreatheTest-table.php';
     require dirname(__DIR__) . DIR_SEPARATOR . SITE_DIRECTORY_NAME . DIR_SEPARATOR . 'includes/class-webreatheTest-database.php';

@@ -44,6 +44,9 @@ class WebreatheTestAdmin
     {
         ?>
             <script type="text/javascript">
+                 var ajax = {
+                        url:'<?= SITE_URL . '/control?request=module'?>'
+                    };
                 (function() {
                     var indexFile = (location.pathname.match(/\/(index[^\.]*\.html)/) || ['', ''])[1],
                         rUrl = /(#!\/|api|guide|misc|tutorial|error|index[^\.]*\.html).*$/,

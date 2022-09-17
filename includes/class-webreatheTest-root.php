@@ -85,7 +85,14 @@ class WebreatheTestRoot
             $base_url = preg_replace("/[?&,!*`+²@<>$^#%)(\"_°]/", "", $base_url);
             $base_url = preg_replace("/^\//", "", $base_url);
             if ('control/' === $base_url || 'control' === $base_url) {
-                if (isset($_GET['request']) && in_array($_GET['request'], FormControl::getRequestName())) {
+                $from = filter_input(INPUT_POST, 'from');
+                if ('ajax' === $from) {
+                    $action = filter_input(INPUT_POST, 'action');
+                    if (function_exists($action)) {
+                        call_user_func($action);
+                    }
+                    die;
+                } else if (isset($_GET['request']) && in_array($_GET['request'], FormControl::getRequestName())) {
                     if (isset($_POST['nonce']) && verifyNonceSecurity($_POST['nonce'])) {
                         if (isset($_POST) && !empty($_POST)) {
                             FormControl::onPost();

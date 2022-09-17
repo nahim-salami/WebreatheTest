@@ -1,6 +1,7 @@
 <?php
 
 use WebreatheTest\app\WebreatheTestSession as ISession;
+use WebreatheTest\app\WebreatheTestModule as IModule;
 
 /**
  * Get json filte datas
@@ -166,4 +167,15 @@ function delete_cookies($name, $options = array())
     }
 
     return false;
+}
+
+function getModuleData()
+{
+    echo json_encode(
+        array(
+            'temperature' => IModule::getTemperature(),
+            'vitesse'     => IModule::getVitesse(),
+            'nombreDonne' => IModule::getTailleDonne(),
+        )
+    );
 }

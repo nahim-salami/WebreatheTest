@@ -35,7 +35,7 @@ class WebreatheTestAdminSkin implements Skin
                         $this->module();
                         break;
                     case 'Manage':
-                        echo 'Manage';
+                        $this->manage();
                         break;
                     case 'Account':
                         echo 'Account';
@@ -108,17 +108,14 @@ class WebreatheTestAdminSkin implements Skin
                                 <div class="widget-body">
                                     <div class="d-flex justify-content-between align-items-center">
                                         <div class="state">
-                                            <h6>Module</h6>
-                                            <h2>1,410</h2>
+                                            <h6>Donées reçu</h6>
+                                            <h2 class="receive-data">0</h2>
                                         </div>
                                         <div class="icon">
                                             <i class="ik ik-award"></i>
                                         </div>
                                     </div>
-                                    <small class="text-small mt-10 d-block">Délai d'actualisation 600ms</small>
-                                </div>
-                                <div class="progress progress-sm">
-                                    <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="62" aria-valuemin="0" aria-valuemax="100" style="width: 62%;"></div>
+                                    <small class="text-small mt-10 d-block">Délai d'actualisation <span class="reload-time">1500ms</span></small>
                                 </div>
                             </div>
                         </div>
@@ -127,17 +124,14 @@ class WebreatheTestAdminSkin implements Skin
                                 <div class="widget-body">
                                     <div class="d-flex justify-content-between align-items-center">
                                         <div class="state">
-                                            <h6>Module en cours</h6>
-                                            <h2>14</h2>
+                                            <h6>Données envoyé</h6>
+                                            <h2 class='send-data'>0</h2>
                                         </div>
                                         <div class="icon">
                                             <i class="ik ik-thumbs-up"></i>
                                         </div>
                                     </div>
-                                    <small class="text-small mt-10 d-block">Délai d'actualisation 400ms</small>
-                                </div>
-                                <div class="progress progress-sm">
-                                    <div class="progress-bar bg-success" role="progressbar" aria-valuenow="78" aria-valuemin="0" aria-valuemax="100" style="width: 78%;"></div>
+                                    <small class="text-small mt-10 d-block">Délai d'actualisation <span class="reload-time">1500ms</span></small>
                                 </div>
                             </div>
                         </div>
@@ -146,17 +140,14 @@ class WebreatheTestAdminSkin implements Skin
                                 <div class="widget-body">
                                     <div class="d-flex justify-content-between align-items-center">
                                         <div class="state">
-                                            <h6>Module inactif</h6>
-                                            <h2>2</h2>
+                                            <h6>Température</h6>
+                                            <h2 class='temperature'>2</h2>
                                         </div>
                                         <div class="icon">
                                             <i class="ik ik-calendar"></i>
                                         </div>
                                     </div>
-                                    <small class="text-small mt-10 d-block">Délai d'actualisation 800ms</small>
-                                </div>
-                                <div class="progress progress-sm">
-                                    <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="31" aria-valuemin="0" aria-valuemax="100" style="width: 31%;"></div>
+                                    <small class="text-small mt-10 d-block">Délai d'actualisation <span class="reload-time">1500ms</span></small>
                                 </div>
                             </div>
                         </div>
@@ -165,93 +156,14 @@ class WebreatheTestAdminSkin implements Skin
                                 <div class="widget-body">
                                     <div class="d-flex justify-content-between align-items-center">
                                         <div class="state">
-                                            <h6>Santé</h6>
-                                            <h2>2 erreurs</h2>
+                                            <h6>Vitesse</h6>
+                                            <h2 class='vitese'>10kb/s</h2>
                                         </div>
                                         <div class="icon">
                                             <i class="ik ik-message-square"></i>
                                         </div>
                                     </div>
-                                    <small class="text-small mt-10 d-block">Une action est recommandé</small>
-                                </div>
-                                <div class="progress progress-sm">
-                                    <div class="progress-bar bg-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%;"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="container">
-                    <div class="col-xl-4 col-md-6">
-                        <div class="card latest-update-card">
-                            <div class="card-header">
-                                <h3>Latest Activity</h3>
-                                <div class="card-header-right">
-                                    <ul class="list-unstyled card-option">
-                                        <li><i class="ik ik-chevron-left action-toggle"></i></li>
-                                        <li><i class="ik ik-minus minimize-card"></i></li>
-                                        <li><i class="ik ik-x close-card"></i></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="card-block">
-                                <div class="scroll-widget">
-                                    <div class="latest-update-box">
-                                        <div class="row pt-20 pb-30">
-                                            <div class="col-auto text-right update-meta pr-0">
-                                                <i class="b-primary update-icon ring"></i>
-                                            </div>
-                                            <div class="col pl-5">
-                                                <a href="#!"><h6>Devlopment &amp; Update</h6></a>
-                                                <p class="text-muted mb-0">Lorem ipsum dolor sit amet, <a href="#!" class="text-blue"> More</a></p>
-                                            </div>
-                                        </div>
-                                        <div class="row pb-30">
-                                            <div class="col-auto text-right update-meta pr-0">
-                                                <i class="b-primary update-icon ring"></i>
-                                            </div>
-                                            <div class="col pl-5">
-                                                <a href="#!"><h6>Showcases</h6></a>
-                                                <p class="text-muted mb-0">Lorem dolor sit amet, <a href="#!" class="text-blue"> More</a></p>
-                                            </div>
-                                        </div>
-                                        <div class="row pb-30">
-                                            <div class="col-auto text-right update-meta pr-0">
-                                                <i class="b-success update-icon ring"></i>
-                                            </div>
-                                            <div class="col pl-5">
-                                                <a href="#!"><h6>Miscellaneous</h6></a>
-                                                <p class="text-muted mb-0">Lorem ipsum dolor sit ipsum amet, <a href="#!" class="text-green"> More</a></p>
-                                            </div>
-                                        </div>
-                                        <div class="row pb-30">
-                                            <div class="col-auto text-right update-meta pr-0">
-                                                <i class="b-primary update-icon ring"></i>
-                                            </div>
-                                            <div class="col pl-5">
-                                                <a href="#!"><h6>Showcases</h6></a>
-                                                <p class="text-muted mb-0">Lorem dolor sit amet, <a href="#!" class="text-blue"> More</a></p>
-                                            </div>
-                                        </div>
-                                        <div class="row pb-30">
-                                            <div class="col-auto text-right update-meta pr-0">
-                                                <i class="b-success update-icon ring"></i>
-                                            </div>
-                                            <div class="col pl-5">
-                                                <a href="#!"><h6>Miscellaneous</h6></a>
-                                                <p class="text-muted mb-0">Lorem ipsum dolor sit ipsum amet, <a href="#!" class="text-green"> More</a></p>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-auto text-right update-meta pr-0">
-                                                <i class="b-danger update-icon ring"></i>
-                                            </div>
-                                            <div class="col pl-5">
-                                                <a href="#!"><h6>Your Manager Posted.</h6></a>
-                                                <p class="text-muted mb-0">Lorem ipsum dolor sit amet, <a href="#!" class="text-red"> More</a></p>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    <small class="text-small mt-10 d-block">Délai d'actualisation <span class="reload-time">1500ms</span></small>
                                 </div>
                             </div>
                         </div>
@@ -263,6 +175,61 @@ class WebreatheTestAdminSkin implements Skin
 
     public function module()
     {
+        ?>
+            <div class='main-content'>
+                <div class="container-fluid">
+                <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-header"><h3>Ajouter un module</h3></div>
+                            <div class="card-body">
+                                <form class="" method="POST" action="<?=SITE_URL?>/control/?request=add-module">
+                                    <div class="form-group">
+                                        <label for="nomModule">Nom du module*</label>
+                                        <input type="text" class="form-control" name="module-name" id="nomModule" placeholder="Nom du module" required>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="typeModule">Type de Donnée</label>
+                                        <input type="text" class="form-control" name="module-donne-type" id="typeModule" placeholder="Nom du module">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="moduleUrl">Url du module</label>
+                                        <input type="url" class="form-control" name="module-url" id="moduleUrl" placeholder="Url du module">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="moduleMethod">Method</label>
+                                        <select name="moduleMethod" id="moduleMethod" class="form-control">
+                                            <option value="post">POST</option>
+                                            <option value="get">GET</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="keyModule">Clé du module</label>
+                                        <input type="text" class="form-control" name="module-key" id="keyModule" placeholder="Clé du module">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="nomModule">Description*</label>
+                                        <textarea class="form-control" name="module-name" id="nomModule" placeholder="Nom du module" cols="30" rows="4" required></textarea>
+                                    </div>
+
+                                    <input type="hidden" name="nonce" value="<?=createNonceSecurity()?>">
+                                   
+                                    <button type="submit" class="btn btn-primary mr-2">Créer le module</button>
+                                    <button class="btn btn-light">Cancel</button>
+                                    </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <?php
+    }
+
+    public function manage() {
         ?>
             <div class='main-content'>
                 <div class="container-fluid">
