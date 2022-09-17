@@ -105,6 +105,10 @@ class WebreatheTestRoot
                     return;
                 }
             }
+            if ('/logout' === $base_url || 'logout' === $base_url) {
+                ISession::init();
+                header("location:". SITE_URL . '/login');
+            }
 
             if (in_array($base_url, $data->url->public->index, true) && !$this->sessionStart()) {
                 $page   = (array) $data->url->public->page;
