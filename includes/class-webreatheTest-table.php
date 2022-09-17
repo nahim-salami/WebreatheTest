@@ -69,7 +69,7 @@ abstract class WebreatheTestTable
                 $db->query($user);
                 $db->query($account);
                 $db->query($module);
-                $db->query($moduleData);
+                //$db->query($moduleData);
             }
         } catch (\Throwable $th) {
             $logs_src = dirname(__DIR__, 2) . DIR_SEPARATOR . SITE_DIRECTORY_NAME . DIR_SEPARATOR . '/errorlogs.imo';

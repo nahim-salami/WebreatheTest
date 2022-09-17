@@ -171,11 +171,24 @@ function delete_cookies($name, $options = array())
 
 function getModuleData()
 {
-    echo json_encode(
-        array(
-            'temperature' => IModule::getTemperature(),
-            'vitesse'     => IModule::getVitesse(),
-            'nombreDonne' => IModule::getTailleDonne(),
-        )
+    global $site_data;
+    $db = $site_data['db']->getDb();
+    
+    $query = 'INSERT INTO module(desc_module, date_creation_module, date_utilisation)
+    VALUES(:desc_module, :date_creation_module, :date_utilisation)';
+    $request = $db->prepare($query);
+   
+    $moduleData = array(
+        'temperature' => IModule::getTemperature(),
+        'vitesse'     => IModule::getVitesse(),
+        'nombreDonne' => IModule::getTailleDonne(),
     );
+
+    $request->execute([
+        ':desc_module' => serialize($moduleData),
+        ':date_creation_module' => date("Y-m-d"),
+        ':date_utilisation' => date("Y-m-d")
+    ]);
+
+    echo json_encode($moduleData);
 }
