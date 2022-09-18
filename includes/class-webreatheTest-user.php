@@ -98,7 +98,7 @@ class WebreatheTestUser extends Personne
         $request = $this->db->prepare($request);
         $request->execute([$username]);
         $result = $request->fetchAll();
-        return (count($result) > 1) ? true : false ;
+        return (count($result) >= 1) ? true : false ;
     }
 
     public function generate_id()
